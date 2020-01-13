@@ -1,4 +1,3 @@
-# TODO: Separate (child) class for utils / RR's (who calculate stuff different)
 from abc import ABC, abstractmethod
 
 
@@ -27,6 +26,7 @@ class UtilityProperty(AbsProp):
         super().__init__(name, price, mortgage, propset)
         self.rent1 = rent1
         self.rent2 = rent2
+
 
 class Property(AbsProp):
     def __init__(self, name, price, rent, housecost, hotelcost, rent1, rent2, rent3, rent4, renth, mortgage, propset):

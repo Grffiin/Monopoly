@@ -2,6 +2,8 @@ import csv
 
 import Property
 
+
+# Imports properties from the Properties.csv file
 def import_properties():
     with open("Properties.csv") as csv_file:
         reader = csv.reader(csv_file, delimiter=',')
@@ -22,3 +24,12 @@ def import_properties():
                     # call regular constructor
                     pass
         return prop_list
+
+
+# Imports spaces from the Spaces.csv file
+def import_spaces():
+    with open("Spaces.csv") as csv_file:
+        reader = csv.reader(csv_file, delimiter=',')
+        spaces = []
+        for row in reader:
+            spaces.append({'name': row[0], 'ownable': False, 'owner': None, 'freq': 0})
