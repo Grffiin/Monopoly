@@ -8,6 +8,9 @@ class Player:
     cash = 1500
     properties = []
 
+    def __init__(self, pid):
+        self.pid = pid
+
     def take_turn(self):
         while True:
             doubles = 0
@@ -17,7 +20,7 @@ class Player:
 
             # were doubles rolled?
             if d1 == d2:
-                ++doubles
+                doubles += 1
                 rolled = True
                 if doubles == 3:
                     self.in_jail = True
@@ -25,7 +28,7 @@ class Player:
                     pass
 
             self.current_space = ((d1 + d2 + self.current_space) % 40)
-            # todo: handle
+            # todo: handle landing on the current space
             if rolled:
                 continue
             break
