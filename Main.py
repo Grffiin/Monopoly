@@ -1,6 +1,6 @@
 # Main method
-import Utils
+import Game
 
 if __name__ == '__main__':
-    # todo
-    pass
+    # currently for testing
+    game = Game.Game()
